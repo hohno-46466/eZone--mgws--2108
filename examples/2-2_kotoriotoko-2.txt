@@ -1,0 +1,102 @@
+#
+# (2-2) Message and MQTT makes an interesting messageing tool
+#
+# Last update: Thu Jul 22 20:59:12 JST 2021 by @hohno_at_kuimc
+#
+# Public domain
+#
+
+# ----------------------------------------------------------
+
+# Description:  How to combile kotoriotoko and MQTT
+
+# Requirement: mosquitto clients and the Kotoriotoko commands must be installed
+
+# ----------------------------------------------------------
+
+# (Step1) Introducing awk command
+
+# Note: awk command is a scriping little language which has been avilable as one of the posix commad
+
+# Note: gawk is GNU version of awk command.
+
+(T2)$ gawk '{printf "%d,%s\n", NR,$0; fflush()}'  # Type control-D to stop
+
+(T2)$ gawk '{printf "%s,%s,%s\n", NR,systime(),$0; fflush()}'  # Type control-D to stop
+
+
+# ----------------------------------------------------------
+
+# (Step2)  What is this?
+
+# Note: 
+
+(T2)$ gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}'
+
+# ----------------------------------------------------------
+
+# (Step3) How about this?
+
+# Note: 
+
+(T2)$ mosquitto_sub -t MGWS/NN-Lesson3 | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}'
+
+(T3)$ mosquitto_pub -l -t MGWS/NN-Lesson3
+
+# Note:
+
+# ----------------------------------------------------------
+
+
+# (Step4) If you know Step3, then you can do it.
+
+# Note: 
+
+(T2)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}'
+(T3)$ mosquitto_pub -l -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId 
+
+# Note:
+
+# ----------------------------------------------------------
+# Almost the final steps for the day ^^v
+# ----------------------------------------------------------
+
+# (Step3x) How about this?
+
+# Note: 
+
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
+
+(T2)$ mosquitto_pub -l -t MGWS/NN-Lesson3
+
+# Note:
+
+# ----------------------------------------------------------
+
+# (Step4x) If you know Step3, then you can do it.
+
+# Note: 
+
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
+
+(T2)$ mosquitto_pub -l -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId 
+
+# Note:
+
+# ----------------------------------------------------------
+# Gooool!
+# ----------------------------------------------------------
+
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
+
+(T3)$ sudo cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId      
+
+# ----------------------------------------------------------
+
+# Important notice. You can use the tweet.sh command instead of the dmtweet.sh command.
+# However, if you frequently send meaningless test messages like the one above with the tweet.sh command,
+# your colleagues will be very annoyed by the messages.
+# Some of them will worry that your twitter account has been hijacked.
+
+# ----------------------------------------------------------
+
