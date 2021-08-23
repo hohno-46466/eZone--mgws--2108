@@ -1,0 +1,31 @@
+#
+# (2-3) Message and MQTT makes an interesting messageing tool
+#
+# Last update: Thu Jul 22 20:59:12 JST 2021 by @hohno_at_kuimc
+#
+# Public domain
+#
+
+# ----------------------------------------------------------
+
+# Description:  How to combine kotoriotoko and MQTT
+
+# Requirement: mosquitto clients and the Kotoriotoko commands must be installed
+
+# ----------------------------------------------------------
+# Gooool!
+# ----------------------------------------------------------
+
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
+
+(T3)$ sudo cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId      
+
+# ----------------------------------------------------------
+
+# Important notice. You can use the tweet.sh command instead of the dmtweet.sh command.
+# However, if you frequently send meaningless test messages like the one above with the tweet.sh command,
+# your colleagues will be very annoyed by the messages.
+# Some of them will worry that your twitter account has been hijacked.
+
+# ----------------------------------------------------------
+

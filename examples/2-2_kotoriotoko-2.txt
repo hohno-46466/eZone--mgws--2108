@@ -81,16 +81,6 @@
 
 (T2)$ mosquitto_pub -l -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId 
 
-# Note:
-
-# ----------------------------------------------------------
-# Gooool!
-# ----------------------------------------------------------
-
-(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
-
-(T3)$ sudo cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId      
-
 # ----------------------------------------------------------
 
 # Important notice. You can use the tweet.sh command instead of the dmtweet.sh command.
