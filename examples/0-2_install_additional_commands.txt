@@ -18,6 +18,7 @@
 
 $ sudo apt install cu gawk nkf mosquitto mosquitto-clients
 
+$ which -a mosquitto mosquitto_sub mosquitto_pub
 
 # Note:
 # cu - call up another system (The most important command for Monogramming) 
