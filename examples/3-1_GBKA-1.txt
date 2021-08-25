@@ -68,7 +68,7 @@ $ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 
 (T3)$ mosquitto_sub -t MGWS/Lesson3A
 
-(T4)$ mosquitto_sub -t MGWS/Lesson3A | tee $HOME/Desktop/NN-Lesson3a.tsv
+(T4)$ mosquitto_sub -t MGWS/Lesson3A | cat -n  -u | tee $HOME/Desktop/NN-Lesson3a.tsv
 
 # Note: Replace NN (which is the first two digits in NN-Lesson3a.csv) with your two digits ID number.
 
@@ -85,7 +85,7 @@ $ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 
 (T3)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId
 
-(T4)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId | tee $HOME/Desktop/NN-Lesson3A.tsv
+(T4)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId | cat -n -u | tee $HOME/Desktop/NN-Lesson3A.tsv
 
 # Note: Replace NN (which is the first two digits in NN-Lesson3A.tsv) with your two digits ID number.
 
