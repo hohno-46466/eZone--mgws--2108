@@ -1,7 +1,7 @@
 #
 # (3-1) Basic operation of the cu command
 #
-# Last update: Thu Jul 22 20:59:12 JST 2021 by @hohno_at_kuimc
+# Last update: Tue Aug 24 08:28:33 JST 2021 by @hohno_at_kuimc
 #
 # Public domain
 #
@@ -27,7 +27,7 @@
 
 # (Step1) 
 
-(T2)$ sudo cu -f -s 57600 -l /dev/ttyS3
+(T2)$ cu -f -s 57600 -l /dev/ttyS3
 
 # Note: To stop the cu command, type ENTER ~ . ENTER in this order (Do not type these keys at the same time)
 
@@ -35,40 +35,58 @@
 
 # (Step2)
 
-(T2)$ sudo cu -f -s 57600 -l /dev/ttyS3 | cat -u -n
+(T2)$ cu -f -s 57600 -l /dev/ttyS3 | cat -u -n
 
+# Note: To stop the cu command, type ENTER ~ . ENTER in this order (Do not type these keys at the same time)
 
 # ----------------------------------------------------------
 
 # (Step3)
 
-# Note: prepare sketch_20210723_Lesson2_with_notify_millis_and_keywords.ino on GBKA
+* Prepare a new symbolic link
 
-(T2)$ sudo cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/Lesson2
+$ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
+$ cd
+$ ls ./Desktop
+# Confirm this: Did you see the contents of your Desktop?* Prepare a new symbolic link
 
-(T3)$ mosquitto_sub -t MGWS/Lesson2
+$ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 
-(T4)$ mosquitto_sub -t MGWS/Lesson2 | tee $HOME/Desktop/NN-Lesson2a.csv
+(T2)$ cu -f -s 57600 -l /dev/ttyS3 | cat -u -n | tee $HOME/Desktop/99-Lesson3A.tsv 
 
-# Note: Replace NN (which is the first two digits in NN-Lesson2a.csv) with your two digits ID number.
+# Note: To stop the cu command, type ENTER ~ . ENTER in this order (Do not type these keys at the same time)
 
-# Note: Type Control-C to stop mosquitto_sub. After stopping the commandline on T4, find a new file which name is NN-Lesson2a.csv on your Desktop
-
+* Action1: Find testStep3.tsv file on your Desktop
+* Action2: Open your MS excel and open a new sheet. Then try to read the TSV file
 
 # ----------------------------------------------------------
 
 # (Step4)
 
-# Note:  The same trial with Step3 but use the public broker on the croud
+(T2)$ cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/Lesson3A
+
+(T3)$ mosquitto_sub -t MGWS/Lesson3A
+
+(T4)$ mosquitto_sub -t MGWS/Lesson3A | tee $HOME/Desktop/NN-Lesson3a.tsv
+
+# Note: Replace NN (which is the first two digits in NN-Lesson3a.csv) with your two digits ID number.
+
+# Note: Type Control-C to stop mosquitto_sub. After stopping the commandline on T4, find a new file which name is NN-Lesson3a.tsv on your Desktop
 
 
-(T2)$ sudo cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/NN-Lesson2 -h broker.hivemq.com -I clientId
+# ----------------------------------------------------------
 
-(T3)$ mosquitto_sub -t MGWS/NN-Lesson2 -h broker.hivemq.com -I clientId
+# (Step5)
 
-(T4)$ mosquitto_sub -t MGWS/NN-Lesson2 -h broker.hivemq.com -I clientId | tee $HOME/Desktop/NN-Lesson2b.csv
+# Note:  The same trial with Step4 but use the public broker on the croud
 
-# Note: Replace NN (which is the first two digits in NN-Lesson2.csv) with your two digits ID number.
+(T2)$ cu -f -s 57600 -l /dev/ttyS3 | nkf -u -Lw | mosquitto_pub -l -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId
+
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId
+
+(T4)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId | tee $HOME/Desktop/NN-Lesson3A.tsv
+
+# Note: Replace NN (which is the first two digits in NN-Lesson3A.tsv) with your two digits ID number.
 
 # Note: Type Control-C to stop mosquitto_sub. After stopping the command line on T4, find a new file which name is NN-Lesson2b.csv on your Desktop
 
