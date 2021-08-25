@@ -1,4 +1,4 @@
-//Rotary controls LED
+// Rotary controls LED
 
 int rotaryPin = A0; // select the input pin for the rotary
 int ledPin = 4; // select the pin for the LED
