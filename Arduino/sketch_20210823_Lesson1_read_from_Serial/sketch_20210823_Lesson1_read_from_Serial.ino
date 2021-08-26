@@ -18,7 +18,7 @@ void setup() {
 
 void loop() {
   char *keyword;
-  long timeinfo
+  long timeinfo;
   int val;
   // read the state of the pushbutton value:
   if (Serial.available() > 0) {
