@@ -13,7 +13,7 @@
 # Requirement: mosquitto clients and the Kotoriotoko commands must be installed
 
 # ----------------------------------------------------------
-# Gooool!
+# Gooooal!
 # ----------------------------------------------------------
 
 (T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}'
