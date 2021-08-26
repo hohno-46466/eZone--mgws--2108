@@ -23,7 +23,7 @@ void loop() {
   // read the state of the pushbutton value:
   if (Serial.available() > 0) {
     String str = Serial.readStringUntil('\n');
-    sscanf(str.c_str, "%s %;d %d", keyword, &timeinfo, &buttonState);
+    sscanf(str.c_str, "%s %d %d", keyword, &timeinfo, &buttonState);
   } else {
     buttonState = 0;
   }
