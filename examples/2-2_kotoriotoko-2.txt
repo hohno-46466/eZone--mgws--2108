@@ -65,6 +65,8 @@
 
 # Note: 
 
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}'
+
 (T3)$ mosquitto_sub -t MGWS/NN-Lesson3 | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
 
 (T2)$ mosquitto_pub -l -t MGWS/NN-Lesson3
@@ -76,6 +78,8 @@
 # (Step4x) If you know Step3, then you can do it.
 
 # Note: 
+
+(T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}'
 
 (T3)$ mosquitto_sub -t MGWS/NN-Lesson3 -h broker.hivemq.com -I clientId | gawk '{printf "dmtweet.sh -t twitter_name %s,%s,%s\n", NR,systime(),$0; fflush()}' | sh -x
 
