@@ -11,7 +11,7 @@ void setup() {
 void loop() {
  // read the value from the sensor:
  rotaryValue = analogRead(rotaryPin);
- rotaryValue = map(rotaryValue, 0, 1023, 2000 0, 0);
+ rotaryValue = map(rotaryValue, 0, 1023, 2000, 0);
  // turn the ledPin on
  digitalWrite(ledPin, HIGH);
  // stop the program for <sensorValue> milliseconds:

@@ -14,7 +14,7 @@
 
 # ----------------------------------------------------------
 
-# (Step0) 
+# (Step0)
 
 # Note: Before executing the following commands, be sure to check the COM port number, which can be found in the Arduino IDE.
 # If the COM port number is 5, replace /dev/ttyS3 with /dev/ttyS5 in the following command, and if the COM port number is something else, replace it as well.
@@ -25,7 +25,7 @@
 
 # ----------------------------------------------------------
 
-# (Step1) 
+# (Step1)
 
 (T2)$ cu -f -s 57600 -l /dev/ttyS3
 
@@ -48,11 +48,12 @@
 $ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 $ cd
 $ ls ./Desktop
+$ ls -l ./Desktop
 # Confirm this: Did you see the contents of your Desktop?* Prepare a new symbolic link
 
 $ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 
-(T2)$ cu -f -s 57600 -l /dev/ttyS3 | cat -u -n | tee $HOME/Desktop/99-Lesson3A.tsv 
+(T2)$ cu -f -s 57600 -l /dev/ttyS3 | cat -u -n | tee $HOME/Desktop/99-Lesson3A.tsv
 
 # Note: To stop the cu command, type ENTER ~ . ENTER in this order (Do not type these keys at the same time)
 
@@ -67,7 +68,7 @@ $ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 
 (T3)$ mosquitto_sub -t MGWS/Lesson3A
 
-(T4)$ mosquitto_sub -t MGWS/Lesson3A | tee $HOME/Desktop/NN-Lesson3a.tsv
+(T4)$ mosquitto_sub -t MGWS/Lesson3A | cat -n  -u | tee $HOME/Desktop/NN-Lesson3a.tsv
 
 # Note: Replace NN (which is the first two digits in NN-Lesson3a.csv) with your two digits ID number.
 
@@ -84,7 +85,7 @@ $ ln -s /mnt/c/Users/YOUR_WINDOWS_NAME/Desktop $HOME/Desktop
 
 (T3)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId
 
-(T4)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId | tee $HOME/Desktop/NN-Lesson3A.tsv
+(T4)$ mosquitto_sub -t MGWS/NN-Lesson3A -h broker.hivemq.com -I clientId | cat -n -u | tee $HOME/Desktop/NN-Lesson3A.tsv
 
 # Note: Replace NN (which is the first two digits in NN-Lesson3A.tsv) with your two digits ID number.
 

@@ -6,7 +6,7 @@ int rotaryValue = 0; // variable to store the value coming from the rota
 int prevValue = -1;
 int cnt = 0;
 
-#define MY_KEYWORD  "WhoAreYou-L3A"
+#define MY_KEYWORD  "Hiro765-L3A"
 
 void setup() {
  // declare the ledPin as an OUTPUT:
@@ -19,7 +19,7 @@ void loop() {
 
 	// read the value from the sensor:
 	rotaryValue = analogRead(rotaryPin);
-	rotaryValue = map(rotaryValue, 0, 1023, 1000, 0);
+	rotaryValue = map(rotaryValue, 0, 1023, 2000, 0);
 	if (rotaryValue != prevValue) {
 		Serial.print(MY_KEYWORD);
 		Serial.print("\t");
