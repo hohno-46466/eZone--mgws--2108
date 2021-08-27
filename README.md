@@ -12,7 +12,7 @@
 
 * Directory structure (FYI)
 
-     
+```     
      eZone--mgws--2108
       ├── Arduino
       │   ├── OLD
@@ -44,8 +44,10 @@
       └── scripts
       
       28 directories
+```     
 
      
+```     
      eZone--mgws--2108
       ├── Arduino
       │   ├── OLD
@@ -117,6 +119,7 @@
           └── README.md
        
       28 directories, 40 files
+```     
       
 
 Note: 	url = https://github.com/hohno-46466/eZone--mgws--2108
