@@ -13,7 +13,7 @@
 
 * Directory structure (FYI)
 
-     eZone--mgws--2108
+    eZone--mgws--2108
      ├── Arduino
      │   ├── OLD
      │   │   ├── sketch_20210723_GBKA_Blink
@@ -45,6 +45,10 @@
      │   │   └── sketch_20210823_Lesson0_with_blink_and_millis.ino
      │   ├── sketch_20210823_Lesson0_with_blink_millis_and_keywords
      │   │   └── sketch_20210823_Lesson0_with_blink_millis_and_keywords.ino
+     │   ├── sketch_20210823_Lesson1
+     │   │   └── sketch_20210823_Lesson1.ino
+     │   ├── sketch_20210823_Lesson1_read_from_Serial
+     │   │   └── sketch_20210823_Lesson1_read_from_Serial.ino
      │   ├── sketch_20210823_Lesson2
      │   │   └── sketch_20210823_Lesson2.ino
      │   ├── sketch_20210823_Lesson2_with_counter
@@ -57,7 +61,6 @@
      │   │   └── sketch_20210823_Lesson3A.ino
      │   └── sketch_20210823_Lesson3A_with_notify_millis_and_keywords
      │       └── sketch_20210823_Lesson3A_with_notify_millis_and_keywords.ino
-     ├── README.md
      ├── documents
      │   ├── MonogrammingExampleForFeedbackControl.pdf
      │   ├── MonogrammingForFeedbackControl.pdf
@@ -76,11 +79,11 @@
      ├── misc
      │   ├── README.md
      │   └── sample.tsv
+     ├── README.md
      └── scripts
          └── README.md
-     
-     26 directories, 38 files
 
+     28 directories, 40 files
 
 Note: 	url = https://github.com/hohno-46466/eZone--mgws--2108
 
