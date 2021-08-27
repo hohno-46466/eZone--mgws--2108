@@ -1,8 +1,17 @@
 # GitHub/eZone--mgws--2108
 
-Note: 	url = https://github.com/hohno-46466/eZone--mgws--2108
 
-Note:   url = git@github.com:hohno-46466/eZone--mgws--2108.git
+* The slides used in the lecture:
+  https://goo.gl/PykCRs
+
+* The latest edited version of the same slides (everyone can add comment on this)
+  https://bit.ly/3zbxKzI
+
+* This GitHub repository
+  https://github.com/hohno-46466/eZone--mgws--2108
+
+
+* Directory structure (FYI)
 
      eZone--mgws--2108
      ├── Arduino
@@ -71,4 +80,10 @@ Note:   url = git@github.com:hohno-46466/eZone--mgws--2108.git
          └── README.md
      
      26 directories, 38 files
+
+
+Note: 	url = https://github.com/hohno-46466/eZone--mgws--2108
+
+Note:   url = git@github.com:hohno-46466/eZone--mgws--2108.git
+
 -EOF-
