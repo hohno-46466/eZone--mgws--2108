@@ -4,7 +4,7 @@
 * The slides used in the lecture:
   https://goo.gl/PykCRs
 
-* The latest edited version of the same slides (everyone can add comment on this)
+* The latest edited version of the same slides (everyone can add comments on this)
   https://bit.ly/3zbxKzI
 
 * This GitHub repository
