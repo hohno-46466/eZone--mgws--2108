@@ -1,6 +1,5 @@
 # GitHub/eZone--mgws--2108
 
-
 * The slides used in the lecture:
   https://goo.gl/PykCRs
 
