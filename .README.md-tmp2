@@ -1,17 +1,3 @@
-# GitHub/eZone--mgws--2108
-
-* The slides used in the lecture:
-  https://goo.gl/PykCRs
-
-* The latest edited version of the same slides (everyone can add comments on this):
-  https://bit.ly/3zbxKzI
-
-* This GitHub repository:
-  https://github.com/hohno-46466/eZone--mgws--2108
-
-* Directory structure (FYI)
-
-```     
     ./eZone--mgws--2108
      ├──  Arduino/
      │   ├──  OLD/
@@ -86,12 +72,3 @@
      
      28 directories, 42 files (Thu Jul 14 04:06:48 JST 2022)
 
-
-```     
-      
-
-Note: 	url = https://github.com/hohno-46466/eZone--mgws--2108
-
-Note:   url = git@github.com:hohno-46466/eZone--mgws--2108.git
-
--EOF-
