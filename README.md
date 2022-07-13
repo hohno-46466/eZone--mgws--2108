@@ -3,11 +3,10 @@
 * The slides used in the lecture:
   https://goo.gl/PykCRs
 
-* The latest edited version of the same slides (everyone can add comments on this)
-
+* The latest edited version of the same slides (everyone can add comments on this):
   https://bit.ly/3zbxKzI
 
-* This GitHub repository
+* This GitHub repository:
   https://github.com/hohno-46466/eZone--mgws--2108
 
 * Directory structure (FYI)
