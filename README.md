@@ -12,7 +12,7 @@
 * Directory structure (FYI)
 
 ```     
-    ./eZone--mgws--2108
+     ./eZone--mgws--2108
      ├──  Arduino/
      │   ├──  OLD/
      │   │   ├──  sketch_20210723_GBKA_Blink/
@@ -84,7 +84,7 @@
      └──  scripts/
          └──  README.md
      
-     28 directories, 42 files (Mon Sep  5 19:33:08 JST 2022)
+     28 directories, 42 files (Fri Sep  9 06:46:32 JST 2022)
 
 
 ```     
